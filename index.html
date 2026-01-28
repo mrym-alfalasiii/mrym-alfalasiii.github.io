@@ -1,6 +1,6 @@
-<h1>Freshly Dipped</h1>
-<p class="tagline">Keychains & tasty goods</p>
-  <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="UTF-8">
   <title>Freshly Dipped</title>
   <style>
@@ -8,6 +8,7 @@
       font-family: 'Lucida Handwriting', cursive;
       background: #F5F1F1;
       color: #151313;
+      padding: 20px;
     }
     h1 {
       text-align: center;
@@ -19,7 +20,18 @@
       text-align: center;
       color: #151313;
       font-style: italic;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
+    }
+    .logo {
+      display: block;
+      margin: 10px auto 20px;
+      width: 150px;
+      height: auto;
+    }
+    .image-section img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
     }
     .card {
       max-width: 500px;
@@ -28,6 +40,7 @@
       padding: 25px;
       border-radius: 15px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      border-top: 5px solid #8B4513;
     }
     label {
       display: block;
@@ -55,47 +68,61 @@
       cursor: pointer;
     }
     button:hover {
-      background: #82C574;
-      color: #151313;
+      background: #8B4513;
+      color: white;
     }
   </style>
 </head>
 <body>
 
+<!-- Logo -->
+<img src="YOUR_LOGO_URL_HERE" alt="Freshly Dipped Logo" class="logo">
+
+<!-- Page Header -->
 <h1>Freshly Dipped</h1>
 <p class="tagline">Keychains & tasty treats for everyone!</p>
 
+<!-- Pictures Section -->
+<div class="image-section">
+  <img src="YOUR_KEYCHAIN_IMAGE_URL_HERE" alt="Keychains">
+  <img src="YOUR_SNACK_IMAGE_URL_HERE" alt="Snacks">
+</div>
+
+<!-- Order Form -->
 <div class="card">
   <form action="https://formspree.io/f/XXXXXXXX" method="POST">
 
     <label>Your Name</label>
     <input type="text" name="name" required>
 
-    <label>Class / Section</label>
-    <input type="text" name="class" required>
+    <label>Grade / Section</label>
+    <input type="text" name="grade" required>
 
     <label>Order Type</label>
     <select name="type">
       <option>Ready-made keychain</option>
       <option>Custom keychain</option>
-      <option>Snack / Food item</option>
+      <option>Chocolate covered strawberries</option>
+      <option>Chocolate covered mixed fruits</option>
     </select>
-
-    <label>Charms (for keychains)</label>
-    <input type="checkbox" name="charms" value="Heart"> Heart  
-    <input type="checkbox" name="charms" value="Star"> Star  
-    <input type="checkbox" name="charms" value="Initial"> Initial  
 
     <label>Chain Color (for keychains)</label>
     <select name="color">
       <option>Silver</option>
       <option>Gold</option>
-      <option>Pink</option>
-      <option>Black</option>
     </select>
 
+    <label>Charms (for keychains)</label>
+    <p style="font-style:italic; color:#8B4513;">Pick your charms from the box</p>
+
     <label>Extra Notes / Special Requests</label>
-    <textarea name="notes" placeholder="Ex: Custom text, allergies for food, etc."></textarea>
+    <textarea name="notes" placeholder="Ex: Would you like to add anything?"></textarea>
+
+    <label>Payment</label>
+    <select name="payment">
+      <option>Prepaid</option>
+      <option>Pay later</option>
+    </select>
 
     <button type="submit">Place Order</button>
   </form>
