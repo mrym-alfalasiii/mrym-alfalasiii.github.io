@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Freshly Dipped</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff7f7;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #4a1c1c;
+    }
+    .tagline {
+      text-align: center;
+      color: #777;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+    .card {
+      max-width: 500px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input[type=text], select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background: #4a1c1c;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #6a2c2c;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Freshly Dipped</h1>
+<p class="tagline">Custom keychains & tasty treats</p>
+
+<div class="card">
+  <form action="https://formspree.io/f/XXXXXXXX" method="POST">
+
+    <label>Your Name</label>
+    <input type="text" name="name" required>
+
+    <label>Class / Section</label>
+    <input type="text" name="class" required>
+
+    <label>Order Type</label>
+    <select name="type">
+      <option>Ready-made keychain</option>
+      <option>Custom keychain</option>
+      <option>Snack / Food item</option>
+    </select>
+
+    <label>Charms (for keychains)</label>
+    <input type="checkbox" name="charms" value="Heart"> Heart  
+    <input type="checkbox" name="charms" value="Star"> Star  
+    <input type="checkbox" name="charms" value="Initial"> Initial  
+
+    <label>Chain Color (for keychains)</label>
+    <select name="color">
+      <option>Silver</option>
+      <option>Gold</option>
+      <option>Pink</option>
+      <option>Black</option>
+    </select>
+
+    <label>Extra Notes / Special Requests</label>
+    <textarea name="notes" placeholder="Ex: Custom text, allergies for food, etc."></textarea>
+
+    <button type="submit">Place Order</button>
+  </form>
+</div>
+
+</body>
+</html>
