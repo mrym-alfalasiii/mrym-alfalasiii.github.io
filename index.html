@@ -80,13 +80,7 @@
 
 <!-- Page Header -->
 <h1>Freshly Dipped</h1>
-<p class="tagline">Keychains & tasty treats for everyone!</p>
-
-<!-- Pictures Section -->
-<div class="image-section">
-  <img src="YOUR_KEYCHAIN_IMAGE_URL_HERE" alt="Keychains">
-  <img src="YOUR_SNACK_IMAGE_URL_HERE" alt="Snacks">
-</div>
+<p class="tagline">Keychains & tasty treats.</p>
 
 <!-- Order Form -->
 <div class="card">
@@ -95,15 +89,13 @@
     <label>Your Name</label>
     <input type="text" name="name" required>
 
-    <label>Grade / Section</label>
-    <input type="text" name="grade" required>
+    <label>Class / Section</label>
+    <input type="text" name="class" required>
 
     <label>Order Type</label>
     <select name="type">
       <option>Ready-made keychain</option>
       <option>Custom keychain</option>
-      <option>Chocolate covered strawberries</option>
-      <option>Chocolate covered mixed fruits</option>
     </select>
 
     <label>Chain Color (for keychains)</label>
@@ -112,11 +104,18 @@
       <option>Gold</option>
     </select>
 
-    <label>Charms (for keychains)</label>
-    <p style="font-style:italic; color:#8B4513;">Pick your charms from the box</p>
+    <label>Number of Charms (for keychains)</label>
+    <select name="charms_number">
+      <option>3 charms - 10 AED</option>
+      <option>4 charms - 15 AED</option>
+      <option>5 charms - 20 AED</option>
+    </select>
+
+    <label>Charms Instructions</label>
+    <p style="font-style:italic; color:#8B4513;">Pick your charms from the box at the fair!</p>
 
     <label>Extra Notes / Special Requests</label>
-    <textarea name="notes" placeholder="Ex: Would you like to add anything?"></textarea>
+    <textarea name="notes" placeholder="What would you like to add?"></textarea>
 
     <label>Payment</label>
     <select name="payment">
